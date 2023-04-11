@@ -15,4 +15,6 @@
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
+     <string name="app_name">Mindiary</string>
+    <string name="default_web_client_id">153597970793-o59ipltl1memjvjmaap3l9la2q87rgbn.apps.googleusercontent.com</string>
 </resources>
