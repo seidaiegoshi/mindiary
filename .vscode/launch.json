@@ -5,12 +5,18 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "browser debug",
+			"name": "chrome",
 			"request": "launch",
 			"type": "dart",
 			"program": "lib/main.dart",
 			"args": ["--debug", "chrome", "--web-port", "8080"],
 			"flutterMode": "debug"
+		},
+		{
+			"name": "iPone_14_Pro_Max",
+			"request": "launch",
+			"type": "dart",
+			"deviceId": "DE8B0106-38F2-40B9-8FFE-B055561B6824"
 		},
 		{
 			"name": "mindiary",
@@ -28,6 +34,12 @@
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "release"
+		}
+	],
+	"compounds": [
+		{
+			"name": "web&ois",
+			"configurations": ["chrome", "iPone_14_Pro_Max"]
 		}
 	]
 }
