@@ -47,19 +47,20 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-</dict>
-<key>CFBundleURLTypes</key>
-<array>
-    <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-            <string>com.googleusercontent.apps.153597970793-o59ipltl1memjvjmaap3l9la2q87rgbn</string>
-        </array>
-    </dict>
-</array>
-<key>LSApplicationQueriesSchemes</key>
-<array>
-    <string>google</string>
-</array>
 
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.153597970793-r6hfevlbmajp5p77bkkdbjcvg7lpp28u</string>
+			</array>
+		</dict>
+	</array>
+
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+			<string>google</string>
+	</array>
+</dict>
 </plist>

@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:extension_google_sign_in_as_googleapis_auth/extension_google_sign_in_as_googleapis_auth.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -31,10 +33,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final GoogleSignIn _googleSignIn = GoogleSignIn(
-    clientId:
-        "153597970793-o59ipltl1memjvjmaap3l9la2q87rgbn.apps.googleusercontent.com",
+    clientId: kIsWeb
+        ? "153597970793-o59ipltl1memjvjmaap3l9la2q87rgbn.apps.googleusercontent.com" //web
+        : "153597970793-r6hfevlbmajp5p77bkkdbjcvg7lpp28u.apps.googleusercontent.com", //ios
     scopes: [
       'email',
+      'profile',
       'https://www.googleapis.com/auth/calendar',
     ],
   );
